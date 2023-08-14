@@ -9,7 +9,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 /* Set a background color for the whole page */
 body {
     background-color: #f7f7f7;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 /* Style the section header */
@@ -31,44 +31,94 @@ body {
     margin: 10px auto;
 }
 
+/* Main container for the feature section */
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
 /* Style the feature boxes */
-.box-item {
-    margin-bottom: 20px;
+.content-box {
+    flex: 1;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
+    animation: fadeInUp 1s both;
 }
 
-.box-item:hover {
+.content-box:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.box-item .icon {
+.content-box:nth-child(even) {
+    animation: fadeInUp 1s 0.5s both;
+}
+
+/* Style the feature box icon */
+.content-box .icon {
     font-size: 24px;
     color: #007bff;
     margin-right: 10px;
 }
 
-.box-item .text h4 {
+/* Style the feature box text */
+.content-box .text h4 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.box-item .text p {
+.content-box .text p {
     font-size: 14px;
     color: #777;
 }
 
 /* Style the video embed container */
 .show-box {
-    margin-bottom: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    animation: fadeInUp 1s 1s both;
+}
+
+/* Embed video container */
+.show-box iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .col-lg-4 {
-        width: 100%;
+    #features {
+        flex-direction: column;
+    }
+    
+    .show-box {
+        margin-top: 20px;
+    }
+    
+    .content-box {
+        margin-bottom: 20px;
     }
 }
