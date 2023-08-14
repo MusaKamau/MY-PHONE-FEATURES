@@ -1,124 +1,97 @@
-/* styles.css */
-
-/* Reset some default browser styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol {
-    margin: 0;
-    padding: 0;
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-/* Set a background color for the whole page */
+/* Global styles */
 body {
-    background-color: #f7f7f7;
-    font-family: 'Helvetica Neue', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
-/* Style the section header */
-.section-header {
-    margin-bottom: 30px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.section-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Style the shape div */
-.shape {
-    width: 50px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto;
-}
-
-/* Main container for the feature section */
+/* Section Styles */
 #features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
+  background: #fff;
 }
 
-/* Style the feature boxes */
-.content-box {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-    animation: fadeInUp 1s both;
+.box-item {
+  box-shadow: 0 0 12px #f4f4f4;
+  padding: 15px;
+  margin: 30px 0;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
 }
 
-.content-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.icon {
+  margin: 12px;
 }
 
-.content-box:nth-child(even) {
-    animation: fadeInUp 1s 0.5s both;
+.icon i {
+  color: #008de2;
+  font-size: 30px;
+  transition: color 0.2s linear;
 }
 
-/* Style the feature box icon */
-.content-box .icon {
-    font-size: 24px;
-    color: #007bff;
-    margin-right: 10px;
+.text h4 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #333;
+  transition: color 0.2s linear;
 }
 
-/* Style the feature box text */
-.content-box .text h4 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+.text p {
+  font-size: 14px;
+  line-height: 22px;
 }
 
-.content-box .text p {
-    font-size: 14px;
-    color: #777;
+.box-item:hover {
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
 }
 
-/* Style the video embed container */
+.box-item:hover h4 {
+  color: #008de2;
+}
+
 .show-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-    animation: fadeInUp 1s 1s both;
+  margin-top: 50px;
+  text-align: center;
 }
 
-/* Embed video container */
 .show-box iframe {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 480px;
+  border: none;
 }
 
-/* Keyframes for fadeInUp animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive styles */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    #features {
-        flex-direction: column;
-    }
-    
-    .show-box {
-        margin-top: 20px;
-    }
-    
-    .content-box {
-        margin-bottom: 20px;
-    }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-lg-4 {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .content-left,
+  .content-right {
+    text-align: center;
+  }
 }
