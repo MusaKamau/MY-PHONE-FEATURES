@@ -1,96 +1,74 @@
-/* Common Styles */
-section {
-  padding: 60px 0;
-  min-height: 100vh;
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
 }
 
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
-  outline: none;
-  color: #6f6f6f;
-  transition: color .2s ease-in-out;
+/* Set a background color for the whole page */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Style the section header */
+.section-header {
+    margin-bottom: 30px;
 }
 
-/* Section Styles */
-#features {
-  background: #fff;
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
 }
 
-#features .box-item {
-  box-shadow: 0 0 12px #f4f4f4;
-  padding: 15px;
-  line-height: 22px;
-  margin-top: 30px;
-  border-radius: 3px;
-  background-color: #fff;
-  transition: all .3s ease-in-out;
-  position: relative;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+/* Style the shape div */
+.shape {
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto;
 }
 
-#features .box-item .icon {
-  text-align: center;
-  margin: 12px;
-  transition: all .2s linear;
+/* Style the feature boxes */
+.box-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
-#features .box-item .icon i {
-  color: #008de2;
-  font-size: 30px;
-  transition: all .2s linear;
+.box-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#features .box-item .text h4 {
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 22px;
-  transition: all .2s linear;
+.box-item .icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
 }
 
-#features .box-item .text p {
-  font-size: 14px;
-  line-height: 26px;
+.box-item .text h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-#features .box-item:hover {
-  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, .1);
+.box-item .text p {
+    font-size: 14px;
+    color: #777;
 }
 
-#features .box-item:hover h4 {
-  color: #008de2;
+/* Style the video embed container */
+.show-box {
+    margin-bottom: 20px;
 }
 
-#features .show-box {
-  margin-top: 50px;
-}
-
-#features .show-box iframe {
-  width: 100%;
-}
-
-/* Alignment Adjustments */
-#features .content-left .text,
-#features .content-right .text {
-  text-align: center;
-}
-
-#features .content-right span {
-  float: none;
-  margin-bottom: 10px;
-}
-
-#features .content-left span {
-  float: none;
-  margin-bottom: 10px;
+/* Responsive styles */
+@media (max-width: 768px) {
+    .col-lg-4 {
+        width: 100%;
+    }
 }
