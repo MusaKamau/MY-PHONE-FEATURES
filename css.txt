@@ -1,0 +1,96 @@
+/* Common Styles */
+section {
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+  color: #6f6f6f;
+  transition: color .2s ease-in-out;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Section Styles */
+#features {
+  background: #fff;
+}
+
+#features .box-item {
+  box-shadow: 0 0 12px #f4f4f4;
+  padding: 15px;
+  line-height: 22px;
+  margin-top: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#features .box-item .icon {
+  text-align: center;
+  margin: 12px;
+  transition: all .2s linear;
+}
+
+#features .box-item .icon i {
+  color: #008de2;
+  font-size: 30px;
+  transition: all .2s linear;
+}
+
+#features .box-item .text h4 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  transition: all .2s linear;
+}
+
+#features .box-item .text p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+#features .box-item:hover {
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, .1);
+}
+
+#features .box-item:hover h4 {
+  color: #008de2;
+}
+
+#features .show-box {
+  margin-top: 50px;
+}
+
+#features .show-box iframe {
+  width: 100%;
+}
+
+/* Alignment Adjustments */
+#features .content-left .text,
+#features .content-right .text {
+  text-align: center;
+}
+
+#features .content-right span {
+  float: none;
+  margin-bottom: 10px;
+}
+
+#features .content-left span {
+  float: none;
+  margin-bottom: 10px;
+}
